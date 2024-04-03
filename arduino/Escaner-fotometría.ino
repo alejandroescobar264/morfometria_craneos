@@ -1,66 +1,3 @@
-# Homepage
-
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Introducción y Objetivos
-
-### Jornada de Salud
-
-Con el objeto de favorecer las competencias específicas planteadas en el perfil del egresado de la Licenciatura en Bioinformática (FIUNER), el presente trabajo busca abordar un  problema de asignación de especies crípticas de interés epidemiológico en la región del litoral argentino. 
-
-
-## Desarrollo y Resultados
-
-En base a caracteres morfológicos discretos o el análisis univariado de variables escalares (Fig1A), una nueva especie de murciélago del género Molossus -definida genéticamente [1]- no podía ser operativamente diferenciada de otros 3 molóssidos que cohabitan en la región central. A partir de este planteo, en base a criterios de factibilidad, los estudiantes lograron identificar, seleccionar críticamente, implementar y testear comparativamente una batería de métodos de adquisición y análisis de datos multidimensionales de morfometría craneal basados en medidas lineales (Fig1B) y landmarks en imágenes 2D (Fig2) y objetos 3D obtenidos mediante fotogrametría digital (no mostrados).
-
-![Diseño en FreeCAD](https://github.com/alejandroescobar264/morfometria_craneos/tree/main/img/freecad.png)
-
-#### Code for a specific language
-
-Some more code with the `py` at the start:
-
-``` py
-import tensorflow as tf
-def whatever()
-```
-
-#### With a title
-
-``` py title="bubble_sort.py"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
-
-#### With line numbers
-
-``` py linenums="1"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
-
-#### Highlighting lines
-
-``` py hl_lines="2 3"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
-
-
-
-### Código arduino
-
-El siguiente código se emplea para controlar todo el setup de escaneo:
-
-``` c++ title="Escaner-fotometría.ino" linenums="1" 
 #include <AccelStepper.h>
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
@@ -255,9 +192,3 @@ void PantallaInicio(){
   lcd.setCursor(0, 1); 
   lcd.print("Elija opcion...");
 }
-
-```
-
-## Icons and Emojs
-
-asdasda 
