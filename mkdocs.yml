@@ -1,5 +1,5 @@
 site_name: Adquisición y Análisis de Datos Morfométricos Craneales Multidimensionales
-site_url: https://github.com/alejandroescobar264/morfometria_craneos.git
+site_url: https://alejandroescobar264.github.io/morfometria_craneos/
 theme:
   name: material
   features:
