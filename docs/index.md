@@ -68,6 +68,10 @@ Durante la prueba del escáner, se ejecuta una rutina de escaneo diseñada para 
 
 ![Escaner Ensamblado](img/rutina_escaneo.png)
 
+La rutina se puede apreciar en el siguiente gif:
+
+![Escaner Ensamblado](img/rutina.gif)
+
 ### Procesado de Imágenes
 
 #### Acondicionamiento
