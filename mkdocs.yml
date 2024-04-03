@@ -10,8 +10,6 @@ theme:
     - search.suggest
     - search.highlight
     - content.tabs.link
-    #- content.code.annotation
-    - content.code.copy
   language: es
   palette:
     - scheme: default
@@ -28,17 +26,7 @@ theme:
       accent: lime
 
 plugins:
-  - social
   - search
-
-extra:
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/alejandroescobar264
-    #- icon: fontawesome/brands/twitter
-      #link: https://twitter.com/TheJamesWillett
-    #- icon: fontawesome/brands/linkedin
-      #link: https://www.linkedin.com/in/willettjames/
 
 markdown_extensions:
   - pymdownx.highlight:
