@@ -495,29 +495,29 @@
 <h2 id="desarrollo-y-resultados">Desarrollo y Resultados</h2>
 <h3 id="analisis-en-2-dimensiones-2d">Análisis en 2 Dimensiones (2D)</h3>
 <p>En base a caracteres morfológicos discretos o el análisis univariado de variables escalares, una nueva especie de murciélago del género Molossus -definida genéticamente - no podía ser operativamente diferenciada de otros 3 molóssidos que cohabitan en la región central. A partir de este planteo, en base a criterios de factibilidad, los estudiantes lograron identificar, seleccionar críticamente, implementar y testear comparativamente una batería de métodos de adquisición y análisis de datos multidimensionales de morfometría craneal basados en medidas lineales (Fig1) y landmarks en imágenes 2D (Fig2) y objetos 3D obtenidos mediante fotogrametría digital.</p>
-<p><img alt="Fig1: Análisis de Morfometría Multidimensional 2D" class="image50percent" src="/docs/img/fig_1.png" /></p>
-<p><img alt="Fig2: Análisis de Morfometría con Landmarks 2D" class="image50percent" src="/docs/img/fig_2.png" /></p>
+<p><img alt="Fig1: Análisis de Morfometría Multidimensional 2D" class="image50percent" src="img/fig_1.png" /></p>
+<p><img alt="Fig2: Análisis de Morfometría con Landmarks 2D" class="image50percent" src="img/fig_2.png" /></p>
 <h3 id="analisis-en-3-dimensiones-3d">Análisis en 3 Dimensiones (3D)</h3>
 <p>Para proceder con el estudio morfométrico en 3D se recurrió a técnicas de fotometría digital para obtener un modelo tridimensional del cráneo. </p>
 <h4 id="fotometria-digital">Fotometría digital</h4>
 <p>Como modelo de pruebas para ajustar el procedimiento, se empleó el modelo de un cráneo de murciélago pálido (Antrozous pallidus) de libre uso. El mismo se encuentra disponible en <a href="https://www.thingiverse.com/thing:5380972">thingiverse.com</a>. El modelo fue escalado para ajustarse al tamaño del cráneo de Molossus. </p>
-<p><img alt="Modelos de pruebas" src="/docs/img/craneos.png" /></p>
+<p><img alt="Modelos de pruebas" src="img/craneos.png" /></p>
 <p>Se requirió de un Setup de pruebas que permitiera tomar fotografías de manera automática. Se realizaron las pruebas de concepto con motores paso a paso y una placa de desarrollo Arduino:</p>
-<p><img alt="Prueba de concepto" src="/docs/img/prueba_concepto_1.png" /></p>
+<p><img alt="Prueba de concepto" src="img/prueba_concepto_1.png" /></p>
 <p>Posteriormente se probó emplear una cámara web USB:</p>
-<p><img alt="Prueba de cámara web" src="/docs/img/prueba_concepto_2.png" /></p>
+<p><img alt="Prueba de cámara web" src="img/prueba_concepto_2.png" /></p>
 <p>Pruebas con caja de iluminación:</p>
-<p><img alt="Prueba del setup" src="/docs/img/prueba_concepto_3.png" /></p>
+<p><img alt="Prueba del setup" src="img/prueba_concepto_3.png" /></p>
 <h4 id="escaner-3d">Escaner 3D</h4>
 <p>Para mejorar la repetibilidad del escaneo de los cráneos, se optó por modificar un modelo de escaner 3D por fotometría de OpenScan en su versión clásica. El mismo puede ser impreso mediante una impresora 3D con tecnología FDM, y los archivos se encuentran disponibles en <a href="https://www.thingiverse.com/thing:2755968">thingiverse.com</a>.</p>
 <p>Para el modelado de piezas personalizadas se empleó el software Open Source FreeCAD.</p>
-<p><img alt="Modelado Adaptador" src="/docs/img/freecad.png" /></p>
+<p><img alt="Modelado Adaptador" src="img/freecad.png" /></p>
 <p>Las piezas fueron impresas en una impresora 3D Hellbot Magna 1v2 usando filamento PLA.</p>
-<p><img alt="Piezas Impresas" src="/docs/img/piezas.png" /></p>
+<p><img alt="Piezas Impresas" src="img/piezas.png" /></p>
 <p>El ensamblado final de todas las partes:</p>
-<p><img alt="Escaner Ensamblado" src="/docs/img/ensamble.png" /></p>
+<p><img alt="Escaner Ensamblado" src="img/ensamble.png" /></p>
 <p>Durante la prueba del escáner, se ejecuta una rutina de escaneo diseñada para capturar imágenes tridimensionales con precisión. Esta rutina comienza con un giro completo de 360° de la pieza en intervalos de 15°, deteniéndose en cada paso para la toma de las fotografías correspondientes. Posteriormente, el brazo lateral del escáner se inclina en un ángulo de 60° en ambas direcciones, con incrementos de 20° en cada movimiento. Cada vez que el brazo lateral se inclina, se realiza un giro completo de la pieza en escaneo, asegurando una cobertura exhaustiva del objeto en estudio.</p>
-<p><img alt="Escaner Ensamblado" src="/docs/img/rutina_escaneo.png" /></p>
+<p><img alt="Escaner Ensamblado" src="img/rutina_escaneo.png" /></p>
 <h3 id="procesado-de-imagenes">Procesado de Imágenes</h3>
 <h4 id="acondicionamiento">Acondicionamiento</h4>
 <p>Para el preprocesamiento y acondicionamiento de las imágenes del escaneo, se empleó el programa de manipulación de imágenes de GNU, GIMP. Se añadió la extensión Batch Image Manipulation para aplicar el procesamiento en masa.</p>
@@ -538,11 +538,11 @@
 <p>Renombrar con un patrón</p>
 </li>
 </ul>
-<p><img alt="Modelado Adaptador" src="/docs/img/acondicionamiento.png" /></p>
+<p><img alt="Modelado Adaptador" src="img/acondicionamiento.png" /></p>
 <h4 id="reconstruccion-3d">Reconstrucción 3D</h4>
 <p>Se trabajó con el programa de reconstrucción 3D Open Source Meshroom. Se cargaron las imágenes de cada escaneo al programa y se ajustan los parámetros del flujo de trabajo.</p>
-<p><img alt="Workflow Meshroom" src="/docs/img/workflow_2.png" /></p>
-<p><img alt="Workflow Meshroom" src="/docs/img/workflow_1.png" /></p>
+<p><img alt="Workflow Meshroom" src="img/workflow_2.png" /></p>
+<p><img alt="Workflow Meshroom" src="img/workflow_1.png" /></p>
 <h2 id="codigo-arduino">Código arduino</h2>
 <p>El siguiente código se emplea para controlar todo el setup de escaneo:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Escaner-fotometría.ino</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">  1</a></span>
