@@ -1,6 +1,6 @@
-# Homepage
+# Inicio
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Informe de avances.
 
 ## Introducción y Objetivos
 
@@ -11,52 +11,96 @@ Con el objeto de favorecer las competencias específicas planteadas en el perfil
 
 ## Desarrollo y Resultados
 
-En base a caracteres morfológicos discretos o el análisis univariado de variables escalares (Fig1A), una nueva especie de murciélago del género Molossus -definida genéticamente [1]- no podía ser operativamente diferenciada de otros 3 molóssidos que cohabitan en la región central. A partir de este planteo, en base a criterios de factibilidad, los estudiantes lograron identificar, seleccionar críticamente, implementar y testear comparativamente una batería de métodos de adquisición y análisis de datos multidimensionales de morfometría craneal basados en medidas lineales (Fig1B) y landmarks en imágenes 2D (Fig2) y objetos 3D obtenidos mediante fotogrametría digital (no mostrados).
+### Análisis en 2 Dimensiones (2D)
 
-![Diseño en FreeCAD](https://github.com/alejandroescobar264/morfometria_craneos/tree/main/img/freecad.png)
-
-#### Code for a specific language
-
-Some more code with the `py` at the start:
-
-``` py
-import tensorflow as tf
-def whatever()
-```
-
-#### With a title
-
-``` py title="bubble_sort.py"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
-
-#### With line numbers
-
-``` py linenums="1"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
-
-#### Highlighting lines
-
-``` py hl_lines="2 3"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
+En base a caracteres morfológicos discretos o el análisis univariado de variables escalares, una nueva especie de murciélago del género Molossus -definida genéticamente - no podía ser operativamente diferenciada de otros 3 molóssidos que cohabitan en la región central. A partir de este planteo, en base a criterios de factibilidad, los estudiantes lograron identificar, seleccionar críticamente, implementar y testear comparativamente una batería de métodos de adquisición y análisis de datos multidimensionales de morfometría craneal basados en medidas lineales (Fig1) y landmarks en imágenes 2D (Fig2) y objetos 3D obtenidos mediante fotogrametría digital.
 
 
+![Fig1: Análisis de Morfometría Multidimensional 2D](/docs/img/fig_1.png){ .image50percent }
 
-### Código arduino
+
+![Fig2: Análisis de Morfometría con Landmarks 2D](/docs/img/fig_2.png){ .image50percent }
+
+
+### Análisis en 3 Dimensiones (3D)
+
+Para proceder con el estudio morfométrico en 3D se recurrió a técnicas de fotometría digital para obtener un modelo tridimensional del cráneo. 
+
+#### Fotometría digital
+
+Como modelo de pruebas para ajustar el procedimiento, se empleó el modelo de un cráneo de murciélago pálido (Antrozous pallidus) de libre uso. El mismo se encuentra disponible en [thingiverse.com](https://www.thingiverse.com/thing:5380972). El modelo fue escalado para ajustarse al tamaño del cráneo de Molossus. 
+
+![Modelos de pruebas](/docs/img/craneos.png)
+
+Se requirió de un Setup de pruebas que permitiera tomar fotografías de manera automática. Se realizaron las pruebas de concepto con motores paso a paso y una placa de desarrollo Arduino:
+
+![Prueba de concepto](/docs/img/prueba_concepto_1.png)
+
+Posteriormente se probó emplear una cámara web USB:
+
+![Prueba de cámara web](/docs/img/prueba_concepto_2.png)
+
+Pruebas con caja de iluminación:
+
+![Prueba del setup](/docs/img/prueba_concepto_3.png)
+
+
+#### Escaner 3D
+
+Para mejorar la repetibilidad del escaneo de los cráneos, se optó por modificar un modelo de escaner 3D por fotometría de OpenScan en su versión clásica. El mismo puede ser impreso mediante una impresora 3D con tecnología FDM, y los archivos se encuentran disponibles en [thingiverse.com](https://www.thingiverse.com/thing:2755968).
+
+Para el modelado de piezas personalizadas se empleó el software Open Source FreeCAD.
+
+![Modelado Adaptador](/docs/img/freecad.png)
+
+
+Las piezas fueron impresas en una impresora 3D Hellbot Magna 1v2 usando filamento PLA.
+
+![Piezas Impresas](/docs/img/piezas.png)
+
+
+El ensamblado final de todas las partes:
+
+![Escaner Ensamblado](/docs/img/ensamble.png)
+
+
+Durante la prueba del escáner, se ejecuta una rutina de escaneo diseñada para capturar imágenes tridimensionales con precisión. Esta rutina comienza con un giro completo de 360° de la pieza en intervalos de 15°, deteniéndose en cada paso para la toma de las fotografías correspondientes. Posteriormente, el brazo lateral del escáner se inclina en un ángulo de 60° en ambas direcciones, con incrementos de 20° en cada movimiento. Cada vez que el brazo lateral se inclina, se realiza un giro completo de la pieza en escaneo, asegurando una cobertura exhaustiva del objeto en estudio.
+
+![Escaner Ensamblado](/docs/img/rutina_escaneo.png)
+
+### Procesado de Imágenes
+
+#### Acondicionamiento
+
+Para el preprocesamiento y acondicionamiento de las imágenes del escaneo, se empleó el programa de manipulación de imágenes de GNU, GIMP. Se añadió la extensión Batch Image Manipulation para aplicar el procesamiento en masa.
+
+El acondicionamiento incluye etapas de:
+
+- Recorte
+  - cortar a relación de aspecto estándar (1:1)
+  
+- Corrección de color
+  - convertir a escala de grises
+  - corrección automática de los niveles de color
+  
+- Renombrar con un patrón
+
+![Modelado Adaptador](/docs/img/acondicionamiento.png)
+
+#### Reconstrucción 3D
+
+Se trabajó con el programa de reconstrucción 3D Open Source Meshroom. Se cargaron las imágenes de cada escaneo al programa y se ajustan los parámetros del flujo de trabajo.
+
+![Workflow Meshroom](/docs/img/workflow_2.png)
+
+![Workflow Meshroom](/docs/img/workflow_1.png)
+
+
+
+
+
+
+## Código arduino
 
 El siguiente código se emplea para controlar todo el setup de escaneo:
 
@@ -257,7 +301,3 @@ void PantallaInicio(){
 }
 
 ```
-
-## Icons and Emojs
-
-asdasda 

@@ -1,5 +1,5 @@
-# Page 2
+# Página 2
 
-## Another heading
+## Work in progress
 
-Some more example text
+Coming soon...
