@@ -2,11 +2,11 @@
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Code Annotation Examples
+## Introducción y Objetivos
 
-### Codeblocks
+### Jornada de Salud
 
-Some `code` goes here.
+Con el objeto de favorecer las competencias específicas planteadas en el perfil del egresado de la Licenciatura en Bioinformática (FIUNER), el presente trabajo busca abordar un  problema de asignación de especies crípticas de interés epidemiológico en la región del litoral argentino. 
 
 ### Plain codeblock
 
