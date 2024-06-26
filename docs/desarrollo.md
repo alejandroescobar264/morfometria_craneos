@@ -1,6 +1,6 @@
 # Desarrollo
 
-## Desarrollo y Resultados
+## Versión 1.0
 
 ### Análisis en 2D
 
@@ -94,7 +94,9 @@ El proceso de acondicionamiento consta de las siguientes etapas:
 
     - Se realiza un renombrado de las imágenes siguiendo un patrón establecido para una mejor organización y referencia.
 
-![Modelado Adaptador](img/acondicionamiento.png)
+![Acondicionamiento de imágenes en batch](img/acondicionamiento.png)
+
+![Acondicionamiento de imágenes en batch](img/acondicionamiento_2.png)
 
 
 #### Reconstrucción 3D
@@ -111,6 +113,77 @@ Es importante destacar que Meshroom es un proyecto de código abierto desarrolla
 
 ![Workflow Meshroom](img/workflow_1.png)
 
+El análisis de las características de meshroom se puede observar aquí:
+
+![Procesado Meshroom](img/procesado_meshroom.png)
+
+- En Azul --> Feature Extraction
+- En Naranja --> Feature Matching
+- En Rojo --> Used in Reconstruction
+  
+
+### Mejora Condiciones
+
+#### Fotografías
+
+Se adquirió una cámara fotográfica compacta para mejorar la calidad de las imágenes obtenidas. Se usó una cámara Canon PowerShoot sx510 hs.
+
+![Cámara Canon PowerShoot sx510 hs](img/camara.png)
+
+Se puede notar la considera mejora de la resolución:
+
+![Mejora resolución](img/mejora_resolucion.png)
+
+Se agradece a la licenciada Fabiana Meza por el préstamo del equipo fotográfico.
+
+#### Iluminación
+
+Se mejoraron las condiciones de iluminación con luces LED flexibles que permitieran una iluminación uniforme sobre las muestras, para evitar sombras duras.
+
+También se fabricó una caja de luz para lograr una iluminación controlada.
+
+![Caja de luz](img/caja_de_luz.png)
+
+Se pueden observa las pruebas de iluminación a continuación:
+
+![Prueba con nueva iluminación controlada](img/prueba_iluminacion.png)
+
+
+## Versión 2.0
+
+Se mejoró el primer diseño, eliminando uno de los brazos del soporte, y se incorporó un nuevo motor NEMA 17 para mejorar los ángulos de movimiento del brazo.
+
+![Versión 2.0](img/version_2.png)
+
+### Flujo de Trabajo
+
+#### Condiciones de Captura
+
+Para tomar las fotografías de las muestras se emplearon los siguientes parámetros de la cámara:
+ - Cantidad de fotos: ≈ 140-150 por muestra
+ - Velocidad Obturador: 1/80 seg
+ - Apertura Focal: F 5.0
+ - Sensibilidad Sensor: ISO 100
+
+Con el siguiente setup de trabajo:
+
+![Setup de trabajo](img/setup_trabajo.png)
+
+#### Procesado de Fotos
+
+Primero se proceso el modelo 3D en Meshroom:
+
+![Meshroom](img/meshroom_1.png)
+
+Luego las mallas 3D fueron corregidas en Blender para eliminar el fondo y reparar malformaciones y huecos en las mismas:
+
+![Blender](img/blender.png)
+
+Se muestran las operaciones de limpieza realizadas para obtener el modelo final del cráneo:
+
+![Limpieza Blender](img/limpieza_blender.png)
+
+Luego estos pasos fueron replicados para cada muestra.
 
 ## Código arduino
 
